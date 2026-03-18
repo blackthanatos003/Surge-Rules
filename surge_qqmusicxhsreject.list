@@ -1,4 +1,4 @@
-# 阻断 QQ 音乐 P2P 节点与打洞服务器
+# 阻断 QQ音乐 P2P 节点禁止白嫖PCDN
 DOMAIN,tp2p.kg.qq.com
 DOMAIN,twns.p2ptun.qq.com
 DOMAIN,musicps.p2p.qq.com
