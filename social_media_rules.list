@@ -1,0 +1,42 @@
+# Surge Rule-Set for Social Media (QQ Music & Xiaohongshu)
+# 包含策略：REJECT-DROP, DIRECT, Proxy
+# 建议引用方式：RULE-SET,https://raw.githubusercontent.com/YourUsername/RepoName/main/social_media_rules.list
+
+# --- QQ Music P2P Block ---
+# 阻断 QQ 音乐 P2P 节点与打洞服务器
+DOMAIN,tp2p.kg.qq.com,REJECT-DROP
+DOMAIN,twns.p2ptun.qq.com,REJECT-DROP
+DOMAIN,musicps.p2p.qq.com,REJECT-DROP
+DOMAIN,musicpunch.p2p.qq.com,REJECT-DROP
+
+# --- Xiaohongshu Ads Block ---
+# 拦截小红书商业化、广告与追踪相关域名
+DOMAIN,ads-img-al.xhscdn.com,REJECT-DROP
+DOMAIN,ads-img-qc.xhscdn.com,REJECT-DROP
+DOMAIN,ads-video-al.xhscdn.com,REJECT-DROP
+DOMAIN,ads-video-qc.xhscdn.com,REJECT-DROP
+DOMAIN,ads-vp5.xhscdn.com,REJECT-DROP
+DOMAIN-WILDCARD,ads-*.xhscdn.com,REJECT-DROP
+DOMAIN,growth-img.xhscdn.com,REJECT-DROP
+DOMAIN,sns-webpic.xhscdn.com,REJECT-DROP
+DOMAIN,xhslive-video.xhscnd.com,REJECT-DROP
+
+# --- Xiaohongshu Direct ---
+# 直连放行小红书核心业务 API 与静态资源
+DOMAIN,ci.xiaohongshu.com,DIRECT
+DOMAIN,edith.xiaohongshu.com,DIRECT
+DOMAIN,miniprogram.xiaohongshu.com,DIRECT
+DOMAIN,pages.xiaohongshu.com,DIRECT
+DOMAIN,picasso-static.xiaohongshu.com,DIRECT
+DOMAIN,rec.xiaohongshu.com,DIRECT
+DOMAIN,so.xiaohongshu.com,DIRECT
+DOMAIN,live-room.xiaohongshu.com,DIRECT
+
+# --- Xiaohongshu Proxy ---
+# 网页端或特定入口路由至代理策略
+DOMAIN,www.xiaohongshu.com,Proxy
+
+# --- Xiaohongshu Fallback ---
+# 兜底拦截未被放行的底层追踪与其他冗余请求
+DOMAIN-SUFFIX,xiaohongshu.com,REJECT-DROP
+DOMAIN-SUFFIX,redbascket.com,REJECT-DROP
