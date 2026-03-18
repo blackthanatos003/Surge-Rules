@@ -1,0 +1,21 @@
+# 阻断 QQ 音乐 P2P 节点与打洞服务器
+DOMAIN,tp2p.kg.qq.com
+DOMAIN,twns.p2ptun.qq.com
+DOMAIN,musicps.p2p.qq.com
+DOMAIN,musicpunch.p2p.qq.com
+
+
+# 小红书净化规则集
+DOMAIN,dns.alidns.com
+DOMAIN,doh.pub
+DOMAIN,ads-img-al.xhscdn.com
+DOMAIN,ads-img-qc.xhscdn.com
+DOMAIN,ads-video-al.xhscdn.com
+DOMAIN,ads-video-qc.xhscdn.com
+DOMAIN,ads-vp5.xhscdn.com
+DOMAIN-WILDCARD,ads-*.xhscdn.com
+DOMAIN,growth-img.xhscdn.com
+DOMAIN,sns-webpic.xhscdn.com
+DOMAIN,xhslive-video.xhscnd.com
+DOMAIN-SUFFIX,xiaohongshu.com
+DOMAIN-SUFFIX,redbascket.com
