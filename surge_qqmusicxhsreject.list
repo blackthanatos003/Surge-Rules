@@ -7,8 +7,6 @@ DOMAIN,musicstun.p2p.qq.com
 
 
 # 小红书净化规则集
-DOMAIN,dns.alidns.com
-DOMAIN,doh.pub
 DOMAIN,ads-img-al.xhscdn.com
 DOMAIN,ads-img-qc.xhscdn.com
 DOMAIN,ads-video-al.xhscdn.com
