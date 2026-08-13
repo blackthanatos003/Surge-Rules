@@ -1,11 +1,8 @@
 # Rule Injector shared rules
 #
-# This file is consumed by:
-# - A_inject-rules-proxy.sgmodule -> Proxy
-# - B_inject-rules-PROXY.sgmodule -> PROXY
-#
-# Keep policy names out of this file. The module decides the target policy.
-# NOTE: PROCESS-NAME 不能放进外部 RULE-SET，会报错；进程规则放在各模块的 [Rule] 段。
+# Surge 6.8+ 模块不能在 [Rule] 中直接引用主配置的自定义策略组。
+# A/B 模块已改用内联 [Ruleset ...] 桥接方案；本文件保留供主配置直接引用或维护规则时使用。
+# 外部 RULE-SET 不包含策略名；策略应由主配置中的 RULE-SET 行指定。
 
 DOMAIN-SUFFIX,myip.ipip.net
 DOMAIN-SUFFIX,fanbox.cc

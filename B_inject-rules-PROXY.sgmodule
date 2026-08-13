@@ -1,11 +1,21 @@
-#!name=Rule Injector - PROXY
-#!desc=将公共规则表注入到订阅中，目标策略组：PROXY
+#!name=Rule Injector - PROXY (Surge 6.8+)
+#!desc=按需注入规则。需在主配置中预先桥接 RuleInjectorPROXY 到 PROXY；模块本身不直接引用自定义策略。
 #!category=Injector
+#!system=mac
+
+[Ruleset RuleInjectorPROXY]
+PROCESS-NAME,Antigravity
+PROCESS-NAME,antigravity
+PROCESS-NAME,Codex
+PROCESS-NAME,codex
+DOMAIN-SUFFIX,myip.ipip.net
+DOMAIN-SUFFIX,fanbox.cc
+DOMAIN-SUFFIX,pixiv.net
+DOMAIN-SUFFIX,pximg.net
+DOMAIN-SUFFIX,gamemale.com
+DOMAIN-SUFFIX,mabinogimobile.nexon.com
+DOMAIN-KEYWORD,kemono
+DOMAIN-KEYWORD,pawchive
 
 [Rule]
-PROCESS-NAME,Antigravity,PROXY
-PROCESS-NAME,antigravity,PROXY
-PROCESS-NAME,Codex,PROXY
-PROCESS-NAME,codex,PROXY
-PROCESS-NAME,UURemote,DIRECT
-RULE-SET,https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/inject-rules.list,PROXY
+PROCESS-NAME,/Applications/UURemote.app/,DIRECT
