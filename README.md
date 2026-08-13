@@ -2,21 +2,11 @@
 
 ## Surge Mac 6.8+ 模块用法
 
-Surge 新版模块的 `[Rule]` 只能使用内置策略。模块不能直接引用主配置中的 `Proxy`、`PROXY` 等自定义策略组。为保留按需启停功能，本仓库的两个模块改用内联 Ruleset 桥接方案。
+两个模块均由 Surge 客户端独立加载和注入，不需要服务端订阅或 Mixer 提供任何桥接配置。请根据当前 Surge 配置中的策略组精确名称选择模块；策略组名称区分大小写。
 
 ### A：主配置策略组名为 `Proxy`
 
-在主配置中一次性加入：
-
-```ini
-[Ruleset RuleInjectorProxy]
-DOMAIN,rule-injector-disabled.invalid
-
-[Rule]
-RULE-SET,RuleInjectorProxy,Proxy
-```
-
-然后安装并按需启用：
+安装并按需启用：
 
 ```text
 https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/A_inject-rules-proxy.sgmodule
@@ -24,23 +14,15 @@ https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/A_inject-rules-
 
 ### B：主配置策略组名为 `PROXY`
 
-在主配置中一次性加入：
-
-```ini
-[Ruleset RuleInjectorPROXY]
-DOMAIN,rule-injector-disabled.invalid
-
-[Rule]
-RULE-SET,RuleInjectorPROXY,PROXY
-```
-
-然后安装并按需启用：
+安装并按需启用：
 
 ```text
 https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/B_inject-rules-PROXY.sgmodule
 ```
 
-占位域名使用 RFC 保留的 `.invalid` 顶级域，模块关闭时不会匹配正常流量。模块启用后，Surge 会把模块中的规则补入同名内联 Ruleset。
+如果 Surge 提示模块使用了未知策略，说明所选模块的 `Proxy/PROXY` 大小写与当前配置不一致，或当前配置不存在该策略组。
+
+外部规则表每 172800 秒（48 小时）更新一次。
 
 UURemote 使用 Surge Mac 6.0+ 的 App Bundle 匹配模式：
 

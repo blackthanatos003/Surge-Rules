@@ -1,8 +1,8 @@
 # Rule Injector shared rules
 #
-# Surge 6.8+ 模块不能在 [Rule] 中直接引用主配置的自定义策略组。
-# A/B 模块已改用内联 [Ruleset ...] 桥接方案；本文件保留供主配置直接引用或维护规则时使用。
-# 外部 RULE-SET 不包含策略名；策略应由主配置中的 RULE-SET 行指定。
+# 本文件由 A/B 两个 Surge 模块作为外部 RULE-SET 独立加载。
+# 文件内不包含策略名；A 模块绑定 Proxy，B 模块绑定 PROXY。
+# 自动刷新间隔由模块中的 RULE-SET 行设置为 172800 秒（48 小时）。
 
 DOMAIN-SUFFIX,myip.ipip.net
 DOMAIN-SUFFIX,fanbox.cc
