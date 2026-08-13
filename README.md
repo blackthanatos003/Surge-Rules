@@ -22,7 +22,10 @@ https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/B_inject-rules-
 
 如果 Surge 提示模块使用了未知策略，说明所选模块的 `Proxy/PROXY` 大小写与当前配置不一致，或当前配置不存在该策略组。
 
-外部规则表每 172800 秒（48 小时）更新一次。
+外部规则表每 172800 秒（48 小时）更新一次：
+
+- `inject-rules.list`：由 A/B 模块分别绑定到 `Proxy` 或 `PROXY`。
+- `inject-direct-rules.list`：由 A/B 模块统一绑定到 `DIRECT`，用于维护需要直连的域名；当前包含 `feishu.com`。
 
 UURemote 使用 Surge Mac 6.0+ 的 App Bundle 匹配模式：
 

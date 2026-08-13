@@ -1,0 +1,7 @@
+# Rule Injector shared DIRECT rules
+#
+# 本文件由 A/B 两个 Surge 模块作为外部 RULE-SET 独立加载。
+# 文件内不包含策略名；两个模块均将本规则表绑定到 DIRECT。
+# 自动刷新间隔由模块中的 RULE-SET 行设置为 172800 秒（48 小时）。
+
+DOMAIN-SUFFIX,feishu.com

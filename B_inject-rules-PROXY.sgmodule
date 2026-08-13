@@ -9,4 +9,5 @@ PROCESS-NAME,antigravity,PROXY
 PROCESS-NAME,Codex,PROXY
 PROCESS-NAME,codex,PROXY
 PROCESS-NAME,/Applications/UURemote.app/,DIRECT
+RULE-SET,https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/inject-direct-rules.list,DIRECT,update-interval=172800
 RULE-SET,https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/inject-rules.list,PROXY,update-interval=172800
