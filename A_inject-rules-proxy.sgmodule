@@ -4,10 +4,7 @@
 #!system=mac
 
 [Rule]
-PROCESS-NAME,Antigravity,Proxy
-PROCESS-NAME,antigravity,Proxy
-PROCESS-NAME,Codex,Proxy
-PROCESS-NAME,codex,Proxy
+PROCESS-NAME,/Applications/ChatGPT.app/,PROXY
 PROCESS-NAME,/Applications/UURemote.app/,DIRECT
 RULE-SET,https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/inject-direct-rules.list,DIRECT,update-interval=172800
 RULE-SET,https://raw.githubusercontent.com/acherontia003/Surge-Rules/main/inject-rules.list,Proxy,update-interval=172800
